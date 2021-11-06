@@ -8,4 +8,9 @@ import { Twimp } from '../twimp.model';
 })
 export class TwimpCardComponent  {
   @Input() twimp! :Twimp;
+
+  favorite(): void {
+    this.twimp.favorite = !this.twimp.favorite;
+    console.log(this.twimp.favorite);
+  }
 }
